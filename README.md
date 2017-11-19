@@ -1,5 +1,7 @@
-# Plotly.js-Flask-Example
-A simple plotly.js example served with flask
+# How to setup
+```bash
+$ pip install -r requirements
+````
 
 ## Usage
 
@@ -9,4 +11,3 @@ $ python app.py
  * Restarting with stat
 ```
 
-![screenshot of the graphs created with plotly and flask](http://i.imgur.com/vuYh4v6.png)
