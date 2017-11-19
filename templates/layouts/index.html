@@ -22,16 +22,19 @@
     <!-- Plotly.js -->
     <script src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js"></script>
 
+
+    <script type = "text/javascript" 
+         src = "{{ url_for('static', filename = 'js/script.js') }}" ></script>
+
+
     <script type="text/javascript">
 
         var graphs = {{graphJSON | safe}};
         var ids = {{ids | safe}};
 
-        for(var i in graphs) {
-            Plotly.plot(ids[i], // the ID of the div, created above
-                        graphs[i].data,
-                        graphs[i].layout || {});
-        }
+        // pass the serialized graphs and div ids
+        renderGraphs(graphs, ids);
+
 
     </script>
 </footer>

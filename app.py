@@ -8,6 +8,15 @@ import numpy as np
 
 app = Flask(__name__)
 app.debug = True
+app.config.update(
+    TEMPLATES_AUTO_RELOAD=True
+)
+
+
+@app.route('/home')
+def home():
+    #render homepage
+    return render_template('layouts/home.html')
 
 
 @app.route('/')
